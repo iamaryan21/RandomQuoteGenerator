@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quote Generator</title>
+    <!-- fontawesome integration for using various icons. -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- HTML of the icon that is to be imported from fontawesome. 
+    <i class="far fa-clone"> </i>-->
+    <!-- Script -->
+    <div class="quote-container" id="quote-container">
+        <!-- Quote -->
+        <div class="quote-text">
+            <!-- fas is font awesome solid -->
+            <i class="fas fa-quote-left"></i>
+            <span id="quote"></span>
+            <i class="fas fa-quote-right"></i>
+        </div>
+        <!-- Author Element -->
+        <div class="quote-author">
+            <span id="author"></span>
+        </div>
+        <div class="button-container">
+            <button class="twitter-button" id="twitter" title="Tweet This!">
+                <!-- fab is font awesome brands -->
+                <i class="fab fa-twitter"></i>
+            </button>
+            <button id="new-quote">Generate New Quote</button>
+        </div>
+    </div>
+    <!-- Creating our loader. -->
+    <div class="loader" id="loader"></div>
+    <!-- Why script tag is written at last? JS renders the code line by line, hence if some element is called via JS and it has not been loaded into the browser then it will throw a 'cannot set property of null' error. -->
+    <script src = "script.js"> </script>
+</body>
+</html> 
